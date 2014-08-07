@@ -3,7 +3,7 @@ var CONFIG = {
 };
 
 if(typeof TEMPLATES === 'undefined') {var TEMPLATES = {};}
-TEMPLATES['google-drive-picker-template.html'] = "<button type=\"button\" class=\"btn btn-link btn-google\"><img src=\"../../img/widget-icon-drive-1x.png\"></button>\n" +
+TEMPLATES['google-drive-picker-template.html'] = "<button type=\"button\" class=\"btn btn-link btn-google\"><img src=\"/img/widget-icon-drive-1x.png\"></button>\n" +
     ""; 
 if (typeof RiseVision === "undefined") {
   var RiseVision = {Authorization: {}};

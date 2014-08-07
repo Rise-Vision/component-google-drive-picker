@@ -183,7 +183,7 @@ catch(err) { app = angular.module("risevision.widget.common.google-drive-picker"
 app.run(["$templateCache", function($templateCache) {
   "use strict";
   $templateCache.put("google-drive-picker-template.html",
-    "<button type=\"button\" class=\"btn btn-link btn-google\"><img src=\"../../img/widget-icon-drive-1x.png\"></button>\n" +
+    "<button type=\"button\" class=\"btn btn-link btn-google\"><img src=\"/img/widget-icon-drive-1x.png\"></button>\n" +
     "");
 }]);
 })();
