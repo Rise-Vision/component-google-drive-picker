@@ -15,34 +15,30 @@
   browser.driver.manage().window().setSize(1024, 768);
 
   describe("Google Drive Picker Component", function() {
-    beforeEach(function (){
+    beforeEach(function () {
       browser.get("/test/e2e/ng-google-drive-picker-scenarios.html");
     });
 
     it("Should correctly load", function () {
-      expect(element(by.css(".btn-google-drive"))
-        .isPresent()).to.eventually.be.true;
+      expect(element(by.css(".google-drive-picker .btn")).isPresent()).to.eventually.be.true;
     });
 
     it("Should correctly pick a file", function () {
       //open dialog
-      element(by.css(".btn-google-drive")).click();
+      element(by.css(".google-drive-picker .btn")).click();
       //simulate picks
       element(by.id("simulate-pick")).click();
-      expect(element.all(by.css("#files-picked .file")).count()).to.
-        eventually.equal(3);
+      expect(element.all(by.css("#files-picked .file")).count()).to.eventually.equal(3);
     });
 
     it("Should correctly cancel a dialog", function () {
       //initially not cancelled
-      expect(element(by.id("cancelled")).getAttribute("checked")).
-        to.eventually.be.null;
+      expect(element(by.id("cancelled")).getAttribute("checked")).to.eventually.be.null;
       //open dialog
-      element(by.css(".btn-google-drive")).click();
+      element(by.css(".google-drive-picker .btn")).click();
       //simulate picks
       element(by.id("simulate-cancel")).click();
-      expect(element(by.id("cancelled")).getAttribute("checked")).
-        to.eventually.not.be.null;
+      expect(element(by.id("cancelled")).getAttribute("checked")).to.eventually.not.be.null;
     });
   });
 

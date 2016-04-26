@@ -2,7 +2,7 @@
 
   "use strict";
 
-  angular.module("risevision.widget.common.google-drive-picker", [])
+  angular.module("risevision.widget.common.google-drive-picker", ["risevision.common.i18n"])
     .directive("googleDrivePicker", ["$window", "$document", "$log", "$templateCache", "apiAuth", "apiGooglePicker",
       function ($window, $document, $log, $templateCache, apiAuth, apiGooglePicker) {
       return {

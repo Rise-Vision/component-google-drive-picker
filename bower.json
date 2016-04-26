@@ -1,6 +1,6 @@
 {
   "name": "component-google-drive-picker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/Rise-Vision/component-google-drive-picker",
   "authors": [
     "Stuart Lees <stuartlees@gmail.com>"
@@ -16,13 +16,16 @@
     "tmp"
   ],
   "devDependencies": {
-    "angular-mocks": "1.2.18",
+    "angular-mocks": "~1.3.0",
     "q": "1.0.1",
     "sinon": "~1.10.2"
   },
   "dependencies": {
-    "jquery": "1.11.0",
-    "common-style": "https://github.com/Rise-Vision/common-style.git#1.1.2",
-    "angular": "1.2.18"
+    "angular": "~1.3.0",
+    "rv-common-i18n": "https://github.com/Rise-Vision/common-i18n.git",
+    "rv-common-style": "https://github.com/Rise-Vision/common-style.git"
+  },
+  "resolutions": {
+    "angular": "~1.3.0"
   }
 }
