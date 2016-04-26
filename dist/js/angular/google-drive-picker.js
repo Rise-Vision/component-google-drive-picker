@@ -1,16 +1,8 @@
-/* global CONFIG: true */
-/* exported CONFIG */
-if (typeof CONFIG === "undefined") {
-  var CONFIG = {
-    // variables go here
-  };
-}
-
 (function (angular) {
 
   "use strict";
 
-  angular.module("risevision.widget.common.google-drive-picker", [])
+  angular.module("risevision.widget.common.google-drive-picker", ["risevision.common.i18n"])
     .directive("googleDrivePicker", ["$window", "$document", "$log", "$templateCache", "apiAuth", "apiGooglePicker",
       function ($window, $document, $log, $templateCache, apiAuth, apiGooglePicker) {
       return {
@@ -97,7 +89,12 @@ catch(err) { app = angular.module("risevision.widget.common.google-drive-picker"
 app.run(["$templateCache", function($templateCache) {
   "use strict";
   $templateCache.put("google-drive-picker-template.html",
-    "<button type=\"button\" class=\"btn btn-google-drive\"></button>\n" +
+    "<div class=\"google-drive-picker\">\n" +
+    "  <button type=\"button\" class=\"btn btn-default\">\n" +
+    "    {{\"google-drive-picker.select\" | translate }}\n" +
+    "    <img class=\"icon-right\" src=\"//s3.amazonaws.com/Rise-Images/Icons/drive.svg\">\n" +
+    "  </button>\n" +
+    "</div>\n" +
     "");
 }]);
 })();
