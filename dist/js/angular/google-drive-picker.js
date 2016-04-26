@@ -84,9 +84,9 @@
 })(angular);
 
 (function(module) {
-try { app = angular.module("risevision.widget.common.google-drive-picker"); }
-catch(err) { app = angular.module("risevision.widget.common.google-drive-picker", []); }
-app.run(["$templateCache", function($templateCache) {
+try { module = angular.module("risevision.widget.common.google-drive-picker"); }
+catch(err) { module = angular.module("risevision.widget.common.google-drive-picker", []); }
+module.run(["$templateCache", function($templateCache) {
   "use strict";
   $templateCache.put("google-drive-picker-template.html",
     "<div class=\"google-drive-picker\">\n" +
